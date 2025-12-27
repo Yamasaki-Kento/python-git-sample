@@ -49,3 +49,36 @@ pip freeze > requirements.txt
 ```bash
 pip install -r requirements.txt
 ```
+
+## 3. プルリクエストを出す
+
+## 4. マージ
+
+## 5. feature/upgrade-numpy ブランチを作成
+
+```bash
+git checkout -b feature/upgrade-numpy
+```
+
+## 6. numpyのバージョンアップ
+
+```bash
+pip install --upgrade numpy
+```
+
+## 7. アプリの実行
+
+### 成功したらプルリクエスト＆マージする
+
+成功したら、requirements.txt を更新してプルリクエストを出し、マージします。
+
+```bash
+pip freeze > requirements.txt
+```
+
+### 失敗したらmainブランチに戻って元のバージョンに戻す
+
+```bash
+git checkout main
+pip install -r requirements.txt
+```
